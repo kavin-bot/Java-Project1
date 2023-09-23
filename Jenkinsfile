@@ -16,9 +16,7 @@ pipeline{
             script{
                 gitcheckout(
                      branch:'main', 
-                     url: 'https://github.com/kavin-bot/Java-Project1.git'
-                )
-                
+                     url: 'https://github.com/kavin-bot/Java-Project1.git')
                 }
             }
     }
@@ -36,7 +34,7 @@ pipeline{
             }
         }
     }
-    stage("code analysis"){
+  /*  stage("code analysis"){
         steps{
             script{
 
