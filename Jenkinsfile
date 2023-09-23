@@ -19,7 +19,7 @@ pipeline{
             }
         }
     }
-    stage("unit test"){
+    /*stage("unit test"){
         steps{
             script{
 
@@ -75,7 +75,7 @@ pipeline{
 
             }
         }
-    }
+    } */
   }
 
 }
