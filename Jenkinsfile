@@ -2,22 +2,19 @@ pipeline{
     agent any
 
   stages{
-   /* stage("clean the workspace"){
+    stage("clean the workspace"){
         steps{
             script{
                 cleanWS()
             }
         }
-    }*/
+    }
     stage("code checkouts"){
         steps{
             script{
-                checkout{
-                    branch:"main"
-                    url: "https://github.com/kavin-bot/Java-Project1.git"
+                git branch:"main", url: "https://github.com/kavin-bot/Java-Project1.git"
                 }
             }
-        }
     }
     /*stage("unit test"){
         steps{
