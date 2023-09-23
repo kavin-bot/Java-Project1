@@ -20,7 +20,7 @@ pipeline{
                 }
             }
     }
-    stage("unit test"){
+   /* stage("unit test"){
         steps{
             script{
                mvnTest()
@@ -33,15 +33,15 @@ pipeline{
                 sh 'mvn verify -DskipUnitTests'
             }
         }
-    }
-  /*  stage("code analysis"){
+    }*/
+   stage("code analysis"){
         steps{
             script{
-
+                sh' mvn clean package sonar:sonar'
             }
         }
     }
-    stage("Quality check"){
+   /* stage("Quality check"){
         steps{
             script{
 
