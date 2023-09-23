@@ -12,7 +12,7 @@ pipeline{
     stage("code checkouts"){
         steps{
             script{
-                Checkout{
+                checkout{
                     branch:"main"
                     url: "https://github.com/kavin-bot/Java-Project1.git"
                 }
