@@ -16,21 +16,21 @@ pipeline{
                 }
             }
     }
-    /*stage("unit test"){
+    stage("unit test"){
         steps{
             script{
-
+               sh' mvn test'
             }
         }
     }
     stage("integration test"){
         steps{
             script{
-
+                sh 'mvn verify -DskipUnitTests'
             }
         }
     }
-    stage("code analysis"){
+   /* stage("code analysis"){
         steps{
             script{
 
