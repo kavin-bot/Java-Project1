@@ -22,10 +22,10 @@ pipeline{
                 }
             }
     }
-   /* stage("unit test"){
+    stage("unit test"){
         steps{
             script{
-               sh 'mvn test'
+               mvnTest()
             }
         }
     }
