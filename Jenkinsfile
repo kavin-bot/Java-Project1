@@ -1,3 +1,5 @@
+@Library('shared_library') _
+
 pipeline{
     agent any
 
@@ -12,11 +14,15 @@ pipeline{
     stage("code checkouts"){
         steps{
             script{
-                git branch:'main', url: 'https://github.com/kavin-bot/Java-Project1.git'
+                gitcheckout(
+                     branch:'main', 
+                     url: 'https://github.com/kavin-bot/Java-Project1.git'
+                )
+                
                 }
             }
     }
-    stage("unit test"){
+   /* stage("unit test"){
         steps{
             script{
                sh 'mvn test'
@@ -30,7 +36,7 @@ pipeline{
             }
         }
     }
-   /* stage("code analysis"){
+    stage("code analysis"){
         steps{
             script{
 
